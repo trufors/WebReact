@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Navbar = () => {
-  return(
+  return (
     <nav className="nav">
       <ul>
         <li>Profile</li>
