@@ -1,0 +1,37 @@
+.nav{
+    grid-area: n;
+    background-color: grey;
+    text-decoration: none;
+    list-style: none;
+    
+  }
+  ul { 
+    padding-inline-start: 0;
+   }
+  .item{
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    list-style: none;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    
+  }
+  .item:hover{
+    color: #fff;
+   
+
+
+  }
+  .link{
+   
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #fff;
+  }
+  .link:hover{
+    color: #036CCA;;
+  }
