@@ -1,12 +1,14 @@
 import React from 'react';
 import classes from './Profile.module.css'
 import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = () => {
+const Profile = (props) => {
+    
     return (
         <div className={classes.content}>
-            <img src="https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg" alt='' />
-            <MyPosts />
+            <ProfileInfo />
+            <MyPosts  newPostText={props.newPostText} post = {props.post} addPost = {props.addPost} updateTextArea={props.updateTextArea} />
         </div>
         
     )

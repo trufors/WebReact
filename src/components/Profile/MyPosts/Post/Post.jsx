@@ -8,7 +8,6 @@ const Post = (props) => {
              {props.message}
              <div>
                {props.like} <span className>like</span>
-                
              </div>
             
         </div>
