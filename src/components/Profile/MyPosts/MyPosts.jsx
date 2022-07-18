@@ -9,21 +9,20 @@ import Post from './Post/Post'
 
 
 
+
 const MyPosts = (props) => {
 
-    
 
     let linkText = React.createRef()
     
    
-    let addPosts = () => {    
-        let info = linkText.current.value
-        props.addPost(info) 
-        console.log(props.post)
+    let onAddPost = () => {    
+        props.addPosts()   
     }
+
     let backUp = () => {
         let info = linkText.current.value
-        props.updateTextArea(info)
+        props.updateNewTextArea(info)
 
     }
 
@@ -34,7 +33,7 @@ const MyPosts = (props) => {
             My posts
             <div>
                 <textarea onChange={backUp} value={props.newPostText} ref={linkText}></textarea>
-                <button onClick ={addPosts}>add post</button>
+                <button onClick ={onAddPost}>add post</button>
                 {postsArray}
             </div>
         </div>

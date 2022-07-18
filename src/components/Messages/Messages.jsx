@@ -1,21 +1,22 @@
 import React from 'react';
 import Dialog from './Dialog/Dialog';
 import classes from './Messages.module.css';
-
-
-const Mess = (props) => {
-  return <div className={classes.message} id = {props.id}>{props.text}</div>
-};
-
-let linkMessage = React.createRef()
-
-const newMessage = ()=>{
-  let text = linkMessage.current.value
-  console.log(text)
-}
+import Mess from './Dialog/Message/Message';
 
 
 const Messages = (props) => {
+
+  let linkMessage = React.createRef()
+
+  const newMessage = ()=>{
+    props.updateMess()  
+  }
+
+  const backUp = () => {
+    let text = linkMessage.current.value
+    props.updateArea(text)
+  }
+
   let dialogsArray = props.dialogs.map((dialog)=><Dialog name = {dialog.name} id = {dialog.id}/>);
   let messArray = props.message.map(message => <Mess text = {message.text} id = {message.id} />);
     return (
@@ -25,8 +26,8 @@ const Messages = (props) => {
           </div>
           <div className = {classes.messages}>
             {messArray}
-            <textarea ref = {linkMessage}/>
-            <button onClick={newMessage}></button>
+            <textarea onChange = {backUp} value={props.newMessageText} ref = {linkMessage}/>
+            <button onClick={newMessage}>otpravit</button>
           </div>
         </div>
         
