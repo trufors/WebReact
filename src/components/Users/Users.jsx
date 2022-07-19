@@ -5,7 +5,10 @@ import User from './User/User'
 
 const Users = (props) => {
     console.log(props.users)
-    let usersArray = props.users.map((users) => <User name = {users.name} id = {users.id} status = {users.status}  country ={users.country} followed= {users.followed}/>)
+    let usersArray = props.users.map((users) => <User name = {users.name} id = {users.id} 
+    status = {users.status}  country ={users.country} 
+    followed= {users.followed}
+    addFriends={addFriends}/>)
         console.log(usersArray)
     
     return (

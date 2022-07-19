@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Users from './Users'
-import { addPostActionCreator,updateTextActionCreator } from '../../redux/profile-reducer';
+import { addFriendsActionCreator } from '../../redux/users-reducer';
 
 let mapStateToProps = (state) => {
     return {
@@ -9,9 +9,8 @@ let mapStateToProps = (state) => {
     }
 }
 let mapDispatchToProps = (dispatch) => { return {
-    addPosts: () =>  dispatch(addPostActionCreator()),
-    updateNewTextArea: (text) => dispatch(updateTextActionCreator(text))
-}
+        addFriends: () =>  dispatch(addFriendsActionCreator())
+    }
 }
 const UserContainer = connect(mapStateToProps, mapDispatchToProps)(Users);
 

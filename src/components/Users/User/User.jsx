@@ -24,7 +24,7 @@ const User = (props) => {
                     
                 
                 </div>
-                <button className={classes.button}>{checkFollowedIn(props.followed)}</button>
+                <button className={classes.button}>{checkFollowedIn(props.addFriends)}</button>
             </div>
     )
 }
